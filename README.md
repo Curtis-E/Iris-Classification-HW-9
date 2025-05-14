@@ -19,6 +19,14 @@ Features:
 3. Petal Length
 4. Petal Width
 
-![Iris](https://github.com/user-attachments/assets/bb2c3396-0fe3-42e2-8f6c-43d3684cfab6)
 
-![Iris CM](https://github.com/user-attachments/assets/c4e01550-3238-408c-a08e-45ddfa4370f9)
+![IrisI](https://github.com/user-attachments/assets/2715aadb-ecca-4f28-b9b6-a8b5a5e00f69)
+
+
+![IrisCFM](https://github.com/user-attachments/assets/5add6dc1-30bf-4157-a106-400cc4973e48)
+
+
+## Learn More
+
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html 
+
