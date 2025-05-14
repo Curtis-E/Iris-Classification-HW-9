@@ -19,4 +19,6 @@ Features:
 3. Petal Length
 4. Petal Width
 
+![Iris](https://github.com/user-attachments/assets/bb2c3396-0fe3-42e2-8f6c-43d3684cfab6)
+
 ![Iris CM](https://github.com/user-attachments/assets/c4e01550-3238-408c-a08e-45ddfa4370f9)
