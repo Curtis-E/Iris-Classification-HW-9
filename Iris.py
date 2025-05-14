@@ -6,16 +6,17 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("IRIS.csv")
 
-# y = df.iloc[:, 0].copy().to_numpy()
-# X = df.iloc[:, 1:].copy().to_numpy()
 y = df['species'].copy().to_numpy()
 X = df.drop(columns=['species']).to_numpy()
 
+#Split Train and Test Dataset
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
+#Random Forest Classifier
 clf = RandomForestClassifier(max_depth=12, oob_score=True, verbose=3, n_jobs=-1)
 clf.fit(X_train, y_train)
 
+#Plot features
 importances = pd.DataFrame(clf.feature_importances_, index=df.drop(columns=['species']).columns)
 importances.plot.bar()
 plt.show()
