@@ -4,10 +4,15 @@ from sklearn.ensemble import RandomForestClassifier, BaggingClassifier
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("IRIS.csv")
 
-y = df['species'].copy().to_numpy()
-X = df.drop(columns=['species']).to_numpy()
+# https://www.kaggle.com/datasets/uciml/iris
+df = pd.read_csv("Iris.csv")
+
+# Drops ID feature
+df.drop(columns=['Id'], inplace=True)
+
+y = df['Species'].copy().to_numpy()
+X = df.drop(columns=['Species']).to_numpy()
 
 #Split Train and Test Dataset
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
@@ -17,7 +22,7 @@ clf = RandomForestClassifier(max_depth=12, oob_score=True, verbose=3, n_jobs=-1)
 clf.fit(X_train, y_train)
 
 #Plot features
-importances = pd.DataFrame(clf.feature_importances_, index=df.drop(columns=['species']).columns)
+importances = pd.DataFrame(clf.feature_importances_, index=df.drop(columns=['Species']).columns)
 importances.plot.bar()
 plt.show()
 
